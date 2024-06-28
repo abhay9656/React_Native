@@ -12,6 +12,7 @@ const LoginScreen = () => {
           margin: 10,
           padding: 10,
           borderRadius: 10,
+          borderWidth:1
         }}
       />
       <TextInput style={styles.input} placeholder="Enter your password" />
@@ -29,18 +30,18 @@ const LoginScreen = () => {
 const styles = StyleSheet.create({
   container: {
     paddingVertical: 50,
-    backgroundColor: "green",
+    color:"black",
     flex: 1,
   },
   text: {
     textAlign: "center",
     fontSize: 40,
-    color: "white",
+    color: "black",
     fontWeight: "bold",
     marginTop: 50,
   },
   input: {
-    backgroundColor: "white",
+    borderWidth: 1,
     margin: 10,
     padding: 10,
     borderRadius: 10,

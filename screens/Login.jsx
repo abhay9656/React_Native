@@ -5,7 +5,7 @@ const Login = () => {
     return (
         <View style={styles.container}>
             <View style={styles.logoContainer}>
-                <Image resizeMode='contain' style={styles.icon} source={require('../assets/login.png')} />
+                <Image resizeMode='contain' style={styles.icon} source={require('../assets/Login1.webp')} />
             </View>
             <View style={styles.loginCard}>
                 <View style={styles.formdField}>
@@ -17,7 +17,8 @@ const Login = () => {
                     <TextInput style={styles.input} />
 
                     <Text style={styles.link1}> Forgot Password</Text>
-                    <Pressable style={styles.submitBtn} >
+                    <Pressable style={styles.submitBtn} 
+                    onPress={()=> alert('Login ')}  >
                         <Text style={styles.btnText}>Log in</Text>
                     </Pressable>
                     <Text style={{textAlign:'center',marginVertical:10,fontSize:16}}>OR</Text>
@@ -108,7 +109,9 @@ const styles = StyleSheet.create({
    link2:{
        textAlign:'center',
        color:'#555',
-       marginTop:10
+       marginTop:10,
+       fontSize:15,
+       fontWeight:'bold'
    }
 });
 

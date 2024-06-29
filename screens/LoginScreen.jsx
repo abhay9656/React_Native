@@ -16,14 +16,15 @@ const LoginScreen = () => {
         }}
       />
       <TextInput style={styles.input} placeholder="Enter your password" />
-      <Button
+      <View style={{width:200,marginLeft:80,marginTop:20}}><Button
         title="Login"
         color=""
         style={{
           width: "100px",
           borderRadius: "5px",
         }}
-      />
+      /></View>
+      
     </View>
   );
 };

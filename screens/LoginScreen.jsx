@@ -16,14 +16,11 @@ const LoginScreen = () => {
         }}
       />
       <TextInput style={styles.input} placeholder="Enter your password" />
-      <View style={{width:200,marginLeft:80,marginTop:20}}><Button
-        title="Login"
-        color=""
-        style={{
-          width: "100px",
-          borderRadius: "5px",
-        }}
-      /></View>
+      <View style={styles.button}>
+      <View style={styles.buttonContainer}>
+        <Button title="login" onPress={() => {}} />
+      </View>
+    </View>
       
     </View>
   );
@@ -46,6 +43,14 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     borderRadius: 10,
+  },
+  button:{
+    padding:10,
+    flex:1,
+    alignItems: 'center',
+  },
+  buttonContainer: {
+    width: 200,
   },
 });
 export default LoginScreen;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, Text, TextInput, Button, Image, Pressable } from "react-native";
+import Icon from 'react-native-vector-icons/AntDesign';
 const Login = () => {
     return (
         <View style={styles.container}>
@@ -20,6 +21,18 @@ const Login = () => {
                         <Text style={styles.btnText}>Log in</Text>
                     </Pressable>
                     <Text style={{textAlign:'center',marginVertical:10,fontSize:16}}>OR</Text>
+
+                    <View style={styles.iconContainer}>
+                     <View style={styles.icon1}>
+                     <Icon name="google" size={30}/>
+                     </View>
+                     <View style={styles.icon1}>
+                     <Icon name="apple1" size={30}/>
+                     </View>
+                     <View style={styles.icon1}>
+                     <Icon name="facebook-square" size={30}/>
+                     </View>
+                    </View>
 
                     <Text style={styles.link2}>Don't have an account?sign Up</Text>
                 </View>
@@ -82,7 +95,21 @@ const styles = StyleSheet.create({
         fontSize:18,
         fontWeight:'bold'
     },
-   
+   iconContainer:{
+       flexDirection:'row',
+       justifyContent:'space-evenly',
+       marginBottom:10
+   },
+   icon1:{
+       backgroundColor:'#eee',
+       padding:10,
+       borderRadius:50
+   },
+   link2:{
+       textAlign:'center',
+       color:'#555',
+       marginTop:10
+   }
 });
 
 export default Login

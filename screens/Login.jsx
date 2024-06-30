@@ -1,9 +1,16 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 import { StyleSheet, View, Text, TextInput, Button, Image, Pressable } from "react-native";
 import Icon from 'react-native-vector-icons/AntDesign';
 const Login = () => {
+     
+    const navigation=useNavigation();
+
     return (
         <View style={styles.container}>
+            <Icon name='home' size={30} color={'#fff'} style={{margin:10,top:30,left:20,}}
+            onPress={()=>navigation.navigate('Home')}
+            />
             <View style={styles.logoContainer}>
                 <Image resizeMode='contain' style={styles.icon} source={require('../assets/Login1.webp')} />
             </View>

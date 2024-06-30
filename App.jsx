@@ -3,15 +3,22 @@ import { StyleSheet, Text, View } from 'react-native';
 import HomeScreeen from './screens/HomeScreeen';
 import LoginScreen from './screens/LoginScreen';
 import Login from './screens/Login';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <HomeScreeen /> */}
-     
-      <Login/>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='Login'>
+        <Stack.Screen name="Home" component={HomeScreeen} />
+        <Stack.Screen name="Login" component={Login} options={{
+          title: 'Sign up',
+          header:()=>null
+        }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 

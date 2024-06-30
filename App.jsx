@@ -5,19 +5,15 @@ import LoginScreen from './screens/LoginScreen';
 import Login from './screens/Login';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import StackNavigator from './component/StackNavigator';
 
-const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Login'>
-        <Stack.Screen name="Home" component={HomeScreeen} />
-        <Stack.Screen name="Login" component={Login} options={{
-          title: 'Sign up',
-          header:()=>null
-        }} />
-      </Stack.Navigator>
+     <StackNavigator/>
     </NavigationContainer>
   );
 }

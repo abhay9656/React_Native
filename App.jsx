@@ -7,13 +7,15 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import StackNavigator from './component/StackNavigator';
+import BottomTab from './component/BottomTab';
 
 
 
 export default function App() {
   return (
     <NavigationContainer>
-     <StackNavigator/>
+     {/* <StackNavigator/> */}
+     <BottomTab/>
     </NavigationContainer>
   );
 }
